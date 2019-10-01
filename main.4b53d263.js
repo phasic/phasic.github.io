@@ -186,7 +186,7 @@ const z=(t,e)=>`${t}--${e}`;let L=!0;void 0===window.ShadyCSS?L=!1:void 0===wind
         padding-left: 5px;
       }
 
-    `}});customElements.define("home-component",class extends lt{static get properties(){return{students:Array}}constructor(){super(),this.students=["Jan","Piet-Joris","Korneel","Franky","Juul"]}__goToDetailsPage(t){document.cookie=`studentId=${t}`,window.location.href.includes("guthub")?window.dispatchEvent(new CustomEvent("customNavigate",{detail:"details",bubbles:!0,composed:!0})):window.location="details"}_renderStudentNavigation(t,e){return U`
+    `}});customElements.define("home-component",class extends lt{static get properties(){return{students:Array}}constructor(){super(),this.students=["Jan","Piet-Joris","Korneel","Franky","Juul"]}__goToDetailsPage(t){document.cookie=`studentId=${t}`,window.location.href.includes("github")?window.dispatchEvent(new CustomEvent("customNavigate",{detail:"details",bubbles:!0,composed:!0})):window.location="details"}_renderStudentNavigation(t,e){return U`
       <h2 @click=${t=>this.__goToDetailsPage(e)}>${t}</h2>
     `}render(){return U` 
      ${this.students.map((t,e)=>this._renderStudentNavigation(t,e))}
