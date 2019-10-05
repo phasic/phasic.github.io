@@ -12,12 +12,12 @@ self.__precacheManifest = [
     "url": "vendor/custom-elements-es5-adapter.js"
   },
   {
-    "revision": "893102e1869adc5bce0a94feb6f74249",
-    "url": "vendor/webcomponents-bundle.js"
-  },
-  {
     "revision": "d42dd0732b85d5efa9e1660a1747b05c",
     "url": "vendor/webcomponents-loader.js"
+  },
+  {
+    "revision": "893102e1869adc5bce0a94feb6f74249",
+    "url": "vendor/webcomponents-bundle.js"
   },
   {
     "revision": "0f9a5cf89f1d4757a6a4945a329e1fc0",
@@ -28,12 +28,12 @@ self.__precacheManifest = [
     "url": "vendor/bundles/webcomponents-sd-ce-pf.js"
   },
   {
-    "revision": "da48dd1cd76dee364cc403d607193f16",
-    "url": "vendor/bundles/webcomponents-sd.js"
-  },
-  {
     "revision": "abb358dc9afad389c31bee5903095e06",
     "url": "vendor/bundles/webcomponents-sd-ce.js"
+  },
+  {
+    "revision": "da48dd1cd76dee364cc403d607193f16",
+    "url": "vendor/bundles/webcomponents-sd.js"
   },
   {
     "revision": "4be1a572fca40bcb2202504cb17aed91",
@@ -48,12 +48,12 @@ self.__precacheManifest = [
     "url": "assets/fonts/roboto.woff"
   },
   {
-    "revision": "479970ffb74f2117317f9d24d9e317fe",
-    "url": "assets/fonts/roboto.woff2"
-  },
-  {
     "revision": "8681f434273fd6a267b1a16a035c5f79",
     "url": "assets/fonts/roboto.svg"
+  },
+  {
+    "revision": "479970ffb74f2117317f9d24d9e317fe",
+    "url": "assets/fonts/roboto.woff2"
   },
   {
     "revision": "9b5e91ababe48f96596f6b3494d2fa3e",
