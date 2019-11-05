@@ -847,6 +847,11 @@ const q=(e,t)=>`${e}--${t}`;let U=!0;void 0===window.ShadyCSS?U=!1:void 0===wind
       <p>
         It is still very much in development by a person who converts coffee in lines of code. 
       </p>
+
+
+      <p>
+        V2. Added DB connection
+      </p>
     `}});let De;const Fe=e=>(class extends e{static get properties(){return{__hideNext:Boolean,__hidePrevious:Boolean}}connectedCallback(){super.connectedCallback(),window.addEventListener("flowData",De=(e=>this.__flowDataListener(e.detail))),this.flowRouter=new class{static get properties(){return ke({},super.properties,{__flowMap:Object,__index:Number,__flowData:Object})}constructor(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:0;this.__flowMap=e,this.__index=t,this.__flowData={},this.__flowMap||console.warn("WARNING: no flowMap given")}renderStep(){return this.__isPageAllowed()?L`
       ${this.__flowMap[this.__index]}
     `:"Flow page index exceeded, this functionality needs to be implemented still"}next(){this.__isNextPageAllowed(this.__index)?this.__index++:console.warn("The max index has already been achieved.")}previous(){this.__index>0?this.__index--:console.warn("Cannot go back in the flow.")}isLastStep(){return this.__index===this.__flowMap.length-1}isFirstStep(){return 0===this.__index}set flowData(e){this.__flowData=ke({},this.__flowData,e)}get flowData(){return this.__flowData}__isPageAllowed(){return this.__index<=this.__flowMap.length-1}__isNextPageAllowed(e){return++e<=this.__flowMap.length-1}}(this.routerConfig),this.__hidePrevious=this.flowRouter.isFirstStep(),this.__hideNext=this.flowRouter.isLastStep()}disconnectedCallback(){super.disconnectedCallback(),window.removeEventListener("flowData",De)}flowTemplate(){return L`
