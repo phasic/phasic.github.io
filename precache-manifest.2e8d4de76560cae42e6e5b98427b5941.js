@@ -1,19 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "85f7d31029f24a6cb78a",
-    "url": "main.85f7d310.js"
+    "revision": "d26b4849384da23e1941",
+    "url": "main.d26b4849.js"
   },
   {
-    "revision": "b3def7761bade196d8eef22d64c50def",
+    "revision": "d236ef066262d9023f567294ca0dc1e2",
     "url": "index.html"
   },
   {
     "revision": "8391957aaff84ed2243736878b5b1108",
     "url": "vendor/custom-elements-es5-adapter.js"
-  },
-  {
-    "revision": "d42dd0732b85d5efa9e1660a1747b05c",
-    "url": "vendor/webcomponents-loader.js"
   },
   {
     "revision": "893102e1869adc5bce0a94feb6f74249",
@@ -22,6 +18,10 @@ self.__precacheManifest = [
   {
     "revision": "0f9a5cf89f1d4757a6a4945a329e1fc0",
     "url": "vendor/bundles/webcomponents-ce.js"
+  },
+  {
+    "revision": "d42dd0732b85d5efa9e1660a1747b05c",
+    "url": "vendor/webcomponents-loader.js"
   },
   {
     "revision": "449e154f5a93678178caf6d1d5857d65",
@@ -40,20 +40,20 @@ self.__precacheManifest = [
     "url": "assets/fonts/roboto.eot"
   },
   {
-    "revision": "329ae1c377b1fb667f5be6abd50327fc",
-    "url": "assets/fonts/roboto.ttf"
-  },
-  {
     "revision": "8681f434273fd6a267b1a16a035c5f79",
     "url": "assets/fonts/roboto.svg"
   },
   {
-    "revision": "479970ffb74f2117317f9d24d9e317fe",
-    "url": "assets/fonts/roboto.woff2"
+    "revision": "329ae1c377b1fb667f5be6abd50327fc",
+    "url": "assets/fonts/roboto.ttf"
   },
   {
     "revision": "60fa3c0614b8fb2f394fa29944c21540",
     "url": "assets/fonts/roboto.woff"
+  },
+  {
+    "revision": "479970ffb74f2117317f9d24d9e317fe",
+    "url": "assets/fonts/roboto.woff2"
   },
   {
     "revision": "9b5e91ababe48f96596f6b3494d2fa3e",
