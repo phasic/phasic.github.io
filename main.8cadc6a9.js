@@ -876,13 +876,13 @@ const q=(e,t)=>`${e}--${t}`;let U=!0;void 0===window.ShadyCSS?U=!1:void 0===wind
       <div class="grid">
         ${this.students.map(e=>this._renderStudentCard(e))}
       </div>
-      `:!this.ready&&this.selectedClass?L`loading...`:void 0}static get styles(){return[Pe,Oe,Ie,Re]}});function qe(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}let Ue,Qe,Be,He;customElements.define("class-list-component",class extends ce{static get properties(){return function(e){for(var t=1;t<arguments.length;t++){var n=null!=arguments[t]?arguments[t]:{},r=Object.keys(n);"function"==typeof Object.getOwnPropertySymbols&&(r=r.concat(Object.getOwnPropertySymbols(n).filter(function(e){return Object.getOwnPropertyDescriptor(n,e).enumerable}))),r.forEach(function(t){Ve(e,t,n[t])})}return e}({},super.properties,{selectedClass:String,schoolClasses:Array,ready:Boolean})}constructor(){super(),this.ready=!1}connectedCallback(){super.connectedCallback(),We("schoolClasses").then(e=>{this.schoolClasses=e,this.ready=!0})}updated(e){(e.has("selectedClass")&&this.ready||e.has("ready")&&this.selectedClass)&&(this.__removeSelectedStyle(e.get("selectedClass")),this.__addSelectedStyle(this.selectedClass))}__removeSelectedStyle(e){const t=this.shadowRoot.getElementById(e);t&&t.classList.remove("selected")}__addSelectedStyle(e){this.shadowRoot.getElementById(e).classList.add("selected")}__selectClass(e){window.dispatchEvent(new CustomEvent("selectClass",{detail:{selectedClass:e},bubbles:!0,composed:!0})),window.dispatchEvent(new CustomEvent("flowData",{detail:{selectedStudent:null},bubbles:!0,composed:!0})),this.selectedClass=e}_renderSchoolClassCard(e){return L`
+      `:!this.ready&&this.selectedClass?L`loading...`:void 0}static get styles(){return[Pe,Oe,Ie,Re]}});function qe(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}let Ue,Qe;customElements.define("class-list-component",class extends ce{static get properties(){return function(e){for(var t=1;t<arguments.length;t++){var n=null!=arguments[t]?arguments[t]:{},r=Object.keys(n);"function"==typeof Object.getOwnPropertySymbols&&(r=r.concat(Object.getOwnPropertySymbols(n).filter(function(e){return Object.getOwnPropertyDescriptor(n,e).enumerable}))),r.forEach(function(t){Ve(e,t,n[t])})}return e}({},super.properties,{selectedClass:String,schoolClasses:Array,ready:Boolean})}constructor(){super(),this.ready=!1}connectedCallback(){super.connectedCallback(),We("schoolClasses").then(e=>{this.schoolClasses=e,this.ready=!0})}updated(e){(e.has("selectedClass")&&this.ready||e.has("ready")&&this.selectedClass)&&(this.__removeSelectedStyle(e.get("selectedClass")),this.__addSelectedStyle(this.selectedClass))}__removeSelectedStyle(e){const t=this.shadowRoot.getElementById(e);t&&t.classList.remove("selected")}__addSelectedStyle(e){this.shadowRoot.getElementById(e).classList.add("selected")}__selectClass(e){window.dispatchEvent(new CustomEvent("selectClass",{detail:{selectedClass:e},bubbles:!0,composed:!0})),window.dispatchEvent(new CustomEvent("flowData",{detail:{selectedStudent:null},bubbles:!0,composed:!0})),this.selectedClass=e}_renderSchoolClassCard(e){return L`
       <div class="card" id=${e} @click=${t=>this.__selectClass(e)}>
         ${e}
       </div>
     `}render(){return this.schoolClasses?L` 
         ${this.schoolClasses.map(e=>this._renderSchoolClassCard(e))}
-       `:L`loading...`}static get styles(){return[Pe]}});function $e(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}customElements.define("class-and-student-selection",class extends ce{static get properties(){return function(e){for(var t=1;t<arguments.length;t++){var n=null!=arguments[t]?arguments[t]:{},r=Object.keys(n);"function"==typeof Object.getOwnPropertySymbols&&(r=r.concat(Object.getOwnPropertySymbols(n).filter(function(e){return Object.getOwnPropertyDescriptor(n,e).enumerable}))),r.forEach(function(t){qe(e,t,n[t])})}return e}({},super.properties,{_selectedClass:String,_selectedStudent:Object,data:Object})}connectedCallback(){super.connectedCallback(),window.addEventListener("selectClass",Ue=(e=>this._selectClassListener(e.detail))),window.addEventListener("selectStudent",Qe=(e=>this._selectStudentListener(e.detail)))}disconnectedCallback(){super.disconnectedCallback(),window.removeEventListener("selectClass",Ue),window.removeEventListener("selectStudent",Qe)}updated(e){e.has("data")&&this.data.selectedClass&&(this._selectedClass=this.data.selectedClass),e.has("data")&&this.data.selectedStudent&&(this._selectedStudent=this.data.selectedStudent)}_selectClassListener(e){let t=e.selectedClass;this._selectedClass=t,window.dispatchEvent(new CustomEvent("flowData",{detail:{selectedClass:t},bubbles:!0,composed:!0}))}_selectStudentListener(e){let t=e.selectedStudent;this._selectedStudent=t,window.dispatchEvent(new CustomEvent("flowData",{detail:{selectedStudent:t},bubbles:!0,composed:!0}))}render(){return L`
+       `:L`loading...`}static get styles(){return[Pe]}});function Be(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}customElements.define("class-and-student-selection",class extends ce{static get properties(){return function(e){for(var t=1;t<arguments.length;t++){var n=null!=arguments[t]?arguments[t]:{},r=Object.keys(n);"function"==typeof Object.getOwnPropertySymbols&&(r=r.concat(Object.getOwnPropertySymbols(n).filter(function(e){return Object.getOwnPropertyDescriptor(n,e).enumerable}))),r.forEach(function(t){qe(e,t,n[t])})}return e}({},super.properties,{_selectedClass:String,_selectedStudent:Object,data:Object})}connectedCallback(){super.connectedCallback(),window.addEventListener("selectClass",Ue=(e=>this._selectClassListener(e.detail))),window.addEventListener("selectStudent",Qe=(e=>this._selectStudentListener(e.detail)))}disconnectedCallback(){super.disconnectedCallback(),window.removeEventListener("selectClass",Ue),window.removeEventListener("selectStudent",Qe)}updated(e){e.has("data")&&this.data.selectedClass&&(this._selectedClass=this.data.selectedClass),e.has("data")&&this.data.selectedStudent&&(this._selectedStudent=this.data.selectedStudent)}_selectClassListener(e){let t=e.selectedClass;this._selectedClass=t,window.dispatchEvent(new CustomEvent("flowData",{detail:{selectedClass:t},bubbles:!0,composed:!0}))}_selectStudentListener(e){let t=e.selectedStudent;this._selectedStudent=t,window.dispatchEvent(new CustomEvent("flowData",{detail:{selectedStudent:t},bubbles:!0,composed:!0}))}render(){return L`
       <div class="flex">
         <class-list-component .selectedClass=${this._selectedClass}></class-list-component>
         <student-list-component .selectedClass=${this._selectedClass} .selectedStudent=${this._selectedStudent}></student-list-component>
@@ -901,9 +901,53 @@ const q=(e,t)=>`${e}--${t}`;let U=!0;void 0===window.ShadyCSS?U=!1:void 0===wind
         student-list-component {
           max-width: 60%;
         }
-      `]}});customElements.define("scoring-page",class extends(Fe(ce)){static get properties(){return function(e){for(var t=1;t<arguments.length;t++){var n=null!=arguments[t]?arguments[t]:{},r=Object.keys(n);"function"==typeof Object.getOwnPropertySymbols&&(r=r.concat(Object.getOwnPropertySymbols(n).filter(function(e){return Object.getOwnPropertyDescriptor(n,e).enumerable}))),r.forEach(function(t){$e(e,t,n[t])})}return e}({},super.properties)}constructor(){super(),this.routerConfig=[L`<class-and-student-selection></class-and-student-selection>`,L`<scoring-sheet-component></scoring-sheet-component>`]}render(){return this.flowTemplate()}});customElements.define("summary-page",class extends ce{properties(){return{scoreCards:Object,__mostCommonErrors:Array}}connectedCallback(){super.connectedCallback(),this.__mostCommonErrors=fe(this.scoreCards)}render(){return L`
+      `]}});customElements.define("scoring-page",class extends(Fe(ce)){static get properties(){return function(e){for(var t=1;t<arguments.length;t++){var n=null!=arguments[t]?arguments[t]:{},r=Object.keys(n);"function"==typeof Object.getOwnPropertySymbols&&(r=r.concat(Object.getOwnPropertySymbols(n).filter(function(e){return Object.getOwnPropertyDescriptor(n,e).enumerable}))),r.forEach(function(t){Be(e,t,n[t])})}return e}({},super.properties)}constructor(){super(),this.routerConfig=[L`<class-and-student-selection></class-and-student-selection>`,L`<scoring-sheet-component></scoring-sheet-component>`]}render(){return this.flowTemplate()}});customElements.define("summary-page",class extends ce{properties(){return{scoreCards:Object,__mostCommonErrors:Array}}connectedCallback(){super.connectedCallback(),this.__mostCommonErrors=fe(this.scoreCards)}render(){return L`
       <h2>Here is the summary of all the scores</h2>
-    `}});customElements.define("side-navigation",class extends ce{_closeNavOnNavigation(e){e.path[0]!==this.shadowRoot.getElementById("mySidenav")&&e.path[0]!==this.shadowRoot.getElementById("menubtn")&&this.opened&&this.__closeNav()}__openNav(){this.shadowRoot.getElementById("mySidenav").style.width="250px",window.addEventListener("click",Be=(e=>this._closeNavOnNavigation(e))),this.opened=!0}__closeNav(){this.shadowRoot.getElementById("mySidenav").style.width="0",window.removeEventListener("click",Be),this.opened=!1}__navigate(e){this.__closeNav(),pe(e)}render(){return L`
+    `}});n(56);let He,$e;customElements.define("jens-krijgt-zijn-goesting",class extends ce{static get properties(){return{data:Array,currentWord:String,currentFiche:String,currentFout:String,reRender:Boolean}}constructor(){super(),this.data=[],this.currentWord="",this.currentFiche="",this.currentFout="",this.reRender=!1}_append(e,t){this[e]=t.target.value}__submitWord(){this.currentWord&&-1===this.data.findIndex(e=>e.word===this.currentWord)&&(this.data.push({word:this.currentWord,errors:[]}),this.reRender=!this.reRender)}__submitFout(){const e=this.data[this.data.findIndex(e=>e.word===this.currentWord)];if(-1===e.errors.findIndex(e=>e.fiche===this.currentFiche)){const t=this.currentFout.split(",").map(e=>({fiche:this.currentFiche,error:e}));e.errors.push(t),this.reRender=!this.reRender}}render(){return L`
+    <h2>Word</h2>
+    <input
+      type="text"
+      .value=${this.currentWord}
+      @input=${e=>this._append("currentWord",e)}
+    />
+    <button type="button" @click=${this.__submitWord}>Voeg woord toe</button>
+
+    <h2>
+      Fout
+    </h2>
+    <label>Fiche</label>
+    <input
+      type="text"
+      .value=${this.currentFiche}
+      @input=${e=>this._append("currentFiche",e)}
+    />
+    <br>
+    <label>Fout</label>
+    <input
+      type="text"
+      .value=${this.currentFout}
+      @input=${e=>this._append("currentFout",e)}
+    />
+
+    <button type="button" @click=${this.__submitFout}>Voeg toe</button>
+
+
+<br><br>
+    <div>
+      Current Word: ${this.currentWord}
+
+      <br>
+      Current fiche: ${this.currentFiche}
+      <br>
+      Current fout: ${this.currentFout}
+
+      <br><br>
+      Data:
+      <br>
+      ${JSON.stringify(this.data)}
+    </div>
+
+    `}});customElements.define("side-navigation",class extends ce{_closeNavOnNavigation(e){e.path[0]!==this.shadowRoot.getElementById("mySidenav")&&e.path[0]!==this.shadowRoot.getElementById("menubtn")&&this.opened&&this.__closeNav()}__openNav(){this.shadowRoot.getElementById("mySidenav").style.width="250px",window.addEventListener("click",He=(e=>this._closeNavOnNavigation(e))),this.opened=!0}__closeNav(){this.shadowRoot.getElementById("mySidenav").style.width="0",window.removeEventListener("click",He),this.opened=!1}__navigate(e){this.__closeNav(),pe(e)}render(){return L`
      <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" @click=${this.__closeNav}>&times;</a>
         ${this.pages.map(e=>L`<a class="page-nav" href="#" @click=${()=>this.__navigate(e)}>${e}</a>`)}
@@ -1003,7 +1047,7 @@ const q=(e,t)=>`${e}--${t}`;let U=!0;void 0===window.ShadyCSS?U=!1:void 0===wind
         .main {
           margin: 8px;
         }
-      `]}});customElements.define("main-app",class extends ce{constructor(){super(),je(),this.pageRouter=new he({home:L`<home-page></home-page>`,scoring:L`<scoring-page></scoring-page>`,summary:L`<summary-page></summary-page>`,about:L`<about-page></about-page>`})}connectedCallback(){super.connectedCallback(),window.addEventListener("navigate",He=(e=>this.__navigationListener(e.detail)))}disconnectedCallback(){super.disconnectedCallback(),window.removeEventListener("navigate",He)}__navigationListener(e){let t=e.page;this.pageRouter.navigate(t),this.requestUpdate()}render(){return L`
+      `]}});customElements.define("main-app",class extends ce{constructor(){super(),je(),this.pageRouter=new he({home:L`<home-page></home-page>`,scoring:L`<scoring-page></scoring-page>`,summary:L`<summary-page></summary-page>`,about:L`<about-page></about-page>`,"Jens krijgt zijn goesting":L`<jens-krijgt-zijn-goesting></jens-krijgt-zijn-goesting>`})}connectedCallback(){super.connectedCallback(),window.addEventListener("navigate",$e=(e=>this.__navigationListener(e.detail)))}disconnectedCallback(){super.disconnectedCallback(),window.removeEventListener("navigate",$e)}__navigationListener(e){let t=e.page;this.pageRouter.navigate(t),this.requestUpdate()}render(){return L`
       <app-shell .pages=${this.pageRouter.pages}>
         <div slot="title">
           ${this.pageRouter.page}
@@ -1012,48 +1056,4 @@ const q=(e,t)=>`${e}--${t}`;let U=!0;void 0===window.ShadyCSS?U=!1:void 0===wind
           ${this.pageRouter.renderPage()}
         </div>
       </app-shell>
-    `}});n(56);customElements.define("jens-krijgt-zijn-goesting",class extends ce{static get properties(){return{data:Array,currentWord:String,currentFiche:String,currentFout:String,reRender:Boolean}}constructor(){super(),this.data=[],this.currentWord="",this.currentFiche="",this.currentFout="",this.reRender=!1}_append(e,t){this[e]=t.target.value}__submitWord(){this.currentWord&&-1===this.data.findIndex(e=>e.word===this.currentWord)&&(this.data.push({word:this.currentWord,errors:[]}),this.reRender=!this.reRender)}__submitFout(){const e=this.data[this.data.findIndex(e=>e.word===this.currentWord)];if(-1===e.errors.findIndex(e=>e.fiche===this.currentFiche)){const t=this.currentFout.split(",").map(e=>({fiche:this.currentFiche,error:e}));e.errors.push(t),this.reRender=!this.reRender}}render(){return L`
-    <h2>Word</h2>
-    <input
-      type="text"
-      .value=${this.currentWord}
-      @input=${e=>this._append("currentWord",e)}
-    />
-    <button type="button" @click=${this.__submitWord}>Voeg woord toe</button>
-
-    <h2>
-      Fout
-    </h2>
-    <label>Fiche</label>
-    <input
-      type="text"
-      .value=${this.currentFiche}
-      @input=${e=>this._append("currentFiche",e)}
-    />
-    <br>
-    <label>Fout</label>
-    <input
-      type="text"
-      .value=${this.currentFout}
-      @input=${e=>this._append("currentFout",e)}
-    />
-
-    <button type="button" @click=${this.__submitFout}>Voeg toe</button>
-
-
-<br><br>
-    <div>
-      Current Word: ${this.currentWord}
-
-      <br>
-      Current fiche: ${this.currentFiche}
-      <br>
-      Current fout: ${this.currentFout}
-
-      <br><br>
-      Data:
-      <br>
-      ${JSON.stringify(this.data)}
-    </div>
-
     `}})}]);
